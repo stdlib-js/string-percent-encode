@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-percent-encode",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Percent-encode a UTF-16 encoded string according to RFC 3986.",
   "license": "Apache-2.0",
   "author": {
@@ -19,7 +19,6 @@
   "main": "./lib",
   "directories": {
     "benchmark": "./benchmark",
-    "bin": "./bin",
     "doc": "./docs",
     "example": "./examples",
     "lib": "./lib",
