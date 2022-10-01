@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# Percent-encoding
+# percentEncode
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -79,7 +79,7 @@ var out = percentEncode( '☃' );
 
 ## Notes
 
--   The function [percent-encodes][percent-encoding] an **entire** `string`. Hence, if provided a URI, the function [percent-encodes][percent-encoding] the entire URI.
+-   The function [percent-encodes][percent-encoding] an **entire** string. Hence, if provided a URI, the function [percent-encodes][percent-encoding] the entire URI.
 
     ```javascript
     var out = percentEncode( 'https://en.wikipedia.org/wiki/Mode_(statistics)' );
@@ -103,11 +103,7 @@ var out = percentEncode( '☃' );
 ```javascript
 var percentEncode = require( '@stdlib/string-percent-encode' );
 
-var values;
-var out;
-var i;
-
-values = [
+var values = [
     'Ladies + Gentlemen',
     'An encoded string!',
     'Dogs, Cats & Mice',
@@ -115,9 +111,9 @@ values = [
     'æ',
     '𐐷'
 ];
+var i;
 for ( i = 0; i < values.length; i++ ) {
-    out = percentEncode( values[ i ] );
-    console.log( '%s: %s', values[ i ], out );
+    console.log( '%s: %s', values[ i ], percentEncode( values[ i ] ) );
 }
 ```
 
