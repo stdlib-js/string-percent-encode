@@ -18,6 +18,17 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # percentEncode
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
@@ -34,25 +45,101 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/string-percent-encode
+```
 
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var percentEncode = require( '@stdlib/string-percent-encode' );
+```
+
+#### percentEncode( str )
+
+[Percent-encodes][percent-encoding] a [UTF-16][utf-16] encoded string according to [RFC 3986][rfc-3986-percent-encoding].
+
+```javascript
+var out = percentEncode( '☃' );
+// returns '%E2%98%83'
+```
+
+</section>
+
+<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
+<section class="notes">
 
+## Notes
+
+-   The function [percent-encodes][percent-encoding] an **entire** string. Hence, if provided a URI, the function [percent-encodes][percent-encoding] the entire URI.
+
+    ```javascript
+    var out = percentEncode( 'https://en.wikipedia.org/wiki/Mode_(statistics)' );
+    // returns 'https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMode_%28statistics%29'
+    ```
+
+    To [percent-encode][percent-encoding] a URI, split the URI into separate components, [percent-encode][percent-encoding] relevant components, and then reassemble. 
+
+</section>
+
+<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
+<section class="examples">
 
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var percentEncode = require( '@stdlib/string-percent-encode' );
+
+var values = [
+    'Ladies + Gentlemen',
+    'An encoded string!',
+    'Dogs, Cats & Mice',
+    '☃',
+    'æ',
+    '𐐷'
+];
+var i;
+for ( i = 0; i < values.length; i++ ) {
+    console.log( '%s: %s', values[ i ], percentEncode( values[ i ] ) );
+}
+```
+
+</section>
+
+<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -70,7 +157,7 @@ npm install -g @stdlib/string-percent-encode-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: percent-encode [options] [<string>]
@@ -97,7 +184,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ percent-encode ☃
@@ -131,11 +218,6 @@ $ echo -n '☃' | percent-encode
 
 <section class="related">
 
-## See Also
-
--   <span class="package-name">[`@stdlib/string-percent-encode`][@stdlib/string-percent-encode]</span><span class="delimiter">: </span><span class="description">percent-encode a UTF-16 encoded string according to RFC 3986.</span>
-
-
 </section>
 
 <!-- /.related -->
@@ -153,7 +235,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -176,11 +258,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-percent-encode-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-percent-encode-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-percent-encode.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-percent-encode
 
-[test-image]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-percent-encode/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-percent-encode?branch=main
