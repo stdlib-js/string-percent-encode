@@ -190,16 +190,16 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/string-percent-encode-cli.svg
 [npm-url]: https://npmjs.org/package/@stdlib/string-percent-encode-cli
 
-[test-image]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml?query=branch:v0.1.0
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-percent-encode@v0.1.0/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/string-percent-encode@v0.1.0?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-percent-encode/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/string-percent-encode?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/string-percent-encode@v0.1.0.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/string-percent-encode@v0.1.0/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/string-percent-encode.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/string-percent-encode/main
 
 -->
 
@@ -210,19 +210,19 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
-[cli-section]: https://github.com/stdlib-js/string-percent-encode@v0.1.0#cli
-[cli-url]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/tree/cli
-[@stdlib/string-percent-encode]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/tree/main
+[cli-section]: https://github.com/stdlib-js/string-percent-encode#cli
+[cli-url]: https://github.com/stdlib-js/string-percent-encode/tree/cli
+[@stdlib/string-percent-encode]: https://github.com/stdlib-js/string-percent-encode/tree/main
 
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/tree/deno
-[umd-url]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/tree/umd
-[esm-url]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/tree/esm
-[branches-url]: https://github.com/stdlib-js/string-percent-encode@v0.1.0/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/string-percent-encode/tree/deno
+[umd-url]: https://github.com/stdlib-js/string-percent-encode/tree/umd
+[esm-url]: https://github.com/stdlib-js/string-percent-encode/tree/esm
+[branches-url]: https://github.com/stdlib-js/string-percent-encode/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-percent-encode@v0.1.0/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-percent-encode/main/LICENSE
 
 [percent-encoding]: https://en.wikipedia.org/wiki/Percent-encoding
 
