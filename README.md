@@ -45,25 +45,103 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/string-percent-encode
+```
 
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var percentEncode = require( '@stdlib/string-percent-encode' );
+```
+
+#### percentEncode( str )
+
+[Percent-encodes][percent-encoding] a [UTF-16][utf-16] encoded string according to [RFC 3986][rfc-3986-percent-encoding].
+
+```javascript
+var out = percentEncode( '☃' );
+// returns '%E2%98%83'
+```
+
+</section>
+
+<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
+<section class="notes">
 
+## Notes
+
+-   The function [percent-encodes][percent-encoding] an **entire** string. Hence, if provided a URI, the function [percent-encodes][percent-encoding] the entire URI.
+
+    ```javascript
+    var out = percentEncode( 'https://en.wikipedia.org/wiki/Mode_(statistics)' );
+    // returns 'https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMode_%28statistics%29'
+    ```
+
+    To [percent-encode][percent-encoding] a URI, split the URI into separate components, [percent-encode][percent-encoding] relevant components, and then reassemble. 
+
+</section>
+
+<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
+<section class="examples">
 
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var percentEncode = require( '@stdlib/string-percent-encode' );
+
+var values = [
+    'Ladies + Gentlemen',
+    'An encoded string!',
+    'Dogs, Cats & Mice',
+    '☃',
+    'æ',
+    '𐐷'
+];
+var i;
+for ( i = 0; i < values.length; i++ ) {
+    console.log( '%s: %s', values[ i ], percentEncode( values[ i ] ) );
+}
+```
+
+</section>
+
+<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -81,7 +159,7 @@ npm install -g @stdlib/string-percent-encode-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: percent-encode [options] [<string>]
@@ -108,7 +186,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ percent-encode ☃
@@ -142,11 +220,6 @@ $ echo -n '☃' | percent-encode
 
 <section class="related">
 
-## See Also
-
--   <span class="package-name">[`@stdlib/string-percent-encode`][@stdlib/string-percent-encode]</span><span class="delimiter">: </span><span class="description">percent-encode a UTF-16 encoded string according to RFC 3986.</span>
-
-
 </section>
 
 <!-- /.related -->
@@ -164,7 +237,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -177,7 +250,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -187,8 +260,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-percent-encode-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-percent-encode-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-percent-encode.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-percent-encode
 
 [test-image]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/string-percent-encode/actions/workflows/test.yml?query=branch:main
